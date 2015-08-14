@@ -37,17 +37,17 @@ function fly(robot) {
     bot.drone.ftrim();
 // Take off
     bot.drone.takeoff();
-    after(5*1000, function(){
-
-    bot.drone.left(0.2);});
-    after(5*1000, function() {
+    after(10*1000, function(){
+        bot.drone.left(0.1);
+    });
+    after(15*1000, function() {
             bot.drone.left(0);
-            bot.drone.right(0.2);
+            bot.drone.right(0.1);
         });
 
 
 
-    after(5*1000, function() {
+    after(20*1000, function() {
             bot.drone.right(0);
             bot.drone.land();
             bot.drone.stop();
